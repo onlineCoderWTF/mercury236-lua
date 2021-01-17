@@ -42,7 +42,6 @@ end
 function CRC16(arr)
 	local tmp = 0xffff
 	for i=1,#arr do
-    print(arr[i])
     tmp = Xor(arr[i],tmp)
 		for j=1,8 do
 			local tmp1 = And(tmp,0x01)
@@ -66,4 +65,4 @@ local arr = {0x48, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01} -- CRC: 33 13
 --  0  1  2  3  4  5  6  7  8  9 10
 -- 48 01 01 01 01 01 01 01 01 21 82
 
-print(CRC16(arr))
+--print(CRC16(arr))
